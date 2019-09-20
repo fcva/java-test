@@ -5,6 +5,8 @@
  */
 package javatest;
 
+import ejercicio01.Alumno;
+
 /**
  *
  * @author fva
@@ -15,7 +17,8 @@ public class JavaTest {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        
+        Alumno alumno = new Alumno();
     }
     
 }

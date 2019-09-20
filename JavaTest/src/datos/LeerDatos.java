@@ -8,8 +8,7 @@ package datos;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -17,13 +16,13 @@ import java.util.logging.Logger;
  */
 public class LeerDatos {
     
-    public static String leeString()
+    public static String leerString()
     {
-        String cadena = "";
+        String cadena = null;
         
         BufferedReader entrada = new BufferedReader(new InputStreamReader(System.in));
         
-        System.out.println("Ingrese datos de tipo String:");
+        System.out.print("Ingrese datos de tipo String:");
         
         try {
             
@@ -34,8 +33,31 @@ public class LeerDatos {
             System.out.println(ex);
         }
         
-        System.out.println("Datos ingresado: "+cadena);
+        //System.out.println(cadena);
         
         return cadena;
+    }
+    
+    public static int leerInt()
+    {
+        String cadena = leerString();
+        
+        System.out.print("Ingrese datos de tipo Int:");
+        
+        try {
+        
+            return Integer.parseInt(leerString());
+                    
+        } catch (Exception e) {
+            
+            System.out.println(e);
+            
+            return leerInt();
+        }
+    }
+    
+    public static void mostrarInformacion(String mensaje) {
+        
+        JOptionPane.showMessageDialog(null, mensaje, "Información", JOptionPane.INFORMATION_MESSAGE);
     }
 }

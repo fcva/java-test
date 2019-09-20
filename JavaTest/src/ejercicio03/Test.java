@@ -3,18 +3,20 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package datos;
+package ejercicio03;
 
 /**
  *
  * @author fva
  */
-public class Main {
-
-    public static void main(String args[]) {
+public class Test {
+ 
+    public static void main(String[] args)
+    {
+        Usuario usuario = new Usuario();
         
-        //System.out.println(LeerDatos.leerString());
+        usuario.dni = 223421;
         
-        System.out.println(LeerDatos.leerInt());
+        System.out.println("DNI: "+usuario.dni);
     }
 }
